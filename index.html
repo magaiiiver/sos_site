@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vera Verão Utilidades</title>
+    <!-- Google Fonts (Nunito) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -44,7 +48,11 @@
 
     <main>
         <!-- Início da Seção Início -->
-        <section id="inicio" class="d-flex align-items-center text-center">
+        <section id="inicio" class="d-flex align-items-center text-center position-relative">
+            <!-- Boias Flutuantes -->
+            <img src="https://i.imgur.com/CLIENT_ID/float1.png" class="floating-buoy buoy-1" alt="Boia colorida flutuando">
+            <img src="https://i.imgur.com/CLIENT_ID/float2.png" class="floating-buoy buoy-2" alt="Boia de flamingo flutuando">
+
             <div class="container">
                 <h1 class="display-3">Seu verão, sua festa, seu lazer.</h1>
                 <h2>Tudo em um só lugar.</h2>
@@ -53,65 +61,66 @@
         </section>
         <!-- Fim da Seção Início -->
 
-        <!-- Início da Seção Produtos -->
+        <!-- Início da Seção Galeria de Produtos -->
         <section id="produtos" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Um Mar de Possibilidades</h2>
-                <div class="row">
-                    <!-- Card 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-umbrella-beach fa-3x mb-3"></i>
-                                <h5 class="card-title">Para a Praia</h5>
-                                <p class="card-text">De guarda-sol a boias, tudo para você curtir o sol e o mar.</p>
-                            </div>
-                        </div>
+
+                <!-- Filtros da Galeria -->
+                <div id="gallery-filters" class="text-center mb-4">
+                    <button class="btn btn-filter active" data-filter="*">Todos</button>
+                    <button class="btn btn-filter" data-filter=".praia">Praia</button>
+                    <button class="btn btn-filter" data-filter=".festa">Festa</button>
+                    <button class="btn btn-filter" data-filter=".churrasco">Churrasco</button>
+                    <button class="btn btn-filter" data-filter=".tecnologia">Tecnologia</button>
+                </div>
+
+                <!-- Grade da Galeria -->
+                <div class="gallery-grid">
+                    <!-- Praia -->
+                    <div class="gallery-item praia">
+                        <img src="https://i.imgur.com/CLIENT_ID/praia1.jpg" alt="Cadeira de praia e guarda-sol">
                     </div>
-                    <!-- Card 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-birthday-cake fa-3x mb-3"></i>
-                                <h5 class="card-title">Para a Festa</h5>
-                                <p class="card-text">Balões, velas e decorações para sua celebração ser inesquecível.</p>
-                            </div>
-                        </div>
+                    <div class="gallery-item praia">
+                        <img src="https://i.imgur.com/CLIENT_ID/praia2.jpg" alt="Boia de flamingo no mar">
                     </div>
-                    <!-- Card 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-fire-burner fa-3x mb-3"></i>
-                                <h5 class="card-title">Para o Churrasco</h5>
-                                <p class="card-text">Acessórios e utensílios para o mestre churrasqueiro da turma.</p>
-                            </div>
-                        </div>
+                    <div class="gallery-item praia">
+                        <img src="https://i.imgur.com/CLIENT_ID/praia3.jpg" alt="Kit de frescobol na areia">
                     </div>
-                    <!-- Card 4 -->
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-mobile-alt fa-3x mb-3"></i>
-                                <h5 class="card-title">Tecnologia</h5>
-                                <p class="card-text">Carregadores, caixas de som e gadgets para manter você conectado.</p>
-                            </div>
-                        </div>
+                    <!-- Festa -->
+                    <div class="gallery-item festa">
+                        <img src="https://i.imgur.com/CLIENT_ID/festa1.jpg" alt="Mesa de aniversário decorada">
                     </div>
-                    <!-- Card 5 -->
-                    <div class="col-lg-6 col-md-12 mb-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-home fa-3x mb-3"></i>
-                                <h5 class="card-title">Utilidades do Lar</h5>
-                                <p class="card-text">Soluções práticas que facilitam o seu dia a dia na praia e em casa.</p>
-                            </div>
-                        </div>
+                    <div class="gallery-item festa">
+                        <img src="https://i.imgur.com/CLIENT_ID/festa2.jpg" alt="Bolo com velas">
+                    </div>
+                    <div class="gallery-item festa">
+                        <img src="https://i.imgur.com/CLIENT_ID/festa3.jpg" alt="Crianças com confetes">
+                    </div>
+                    <!-- Churrasco -->
+                    <div class="gallery-item churrasco">
+                        <img src="https://i.imgur.com/CLIENT_ID/churrasco1.jpg" alt="Grelha com carnes">
+                    </div>
+                    <div class="gallery-item churrasco">
+                        <img src="https://i.imgur.com/CLIENT_ID/churrasco2.jpg" alt="Faca de churrasco">
+                    </div>
+                    <div class="gallery-item churrasco">
+                        <img src="https://i.imgur.com/CLIENT_ID/churrasco3.jpg" alt="Pessoas em churrasco">
+                    </div>
+                    <!-- Tecnologia -->
+                    <div class="gallery-item tecnologia">
+                        <img src="https://i.imgur.com/CLIENT_ID/tech1.jpg" alt="Caixa de som na praia">
+                    </div>
+                    <div class="gallery-item tecnologia">
+                        <img src="https://i.imgur.com/CLIENT_ID/tech2.jpg" alt="Power bank carregando celular">
+                    </div>
+                    <div class="gallery-item tecnologia">
+                        <img src="https://i.imgur.com/CLIENT_ID/tech3.jpg" alt="Ring light">
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Fim da Seção Produtos -->
+        <!-- Fim da Seção Galeria de Produtos -->
 
         <!-- Início da Seção Quem Somos -->
         <section id="quemsomos" class="py-5 bg-light">
@@ -119,7 +128,9 @@
                 <h2 class="text-center mb-5">Nascemos da Brisa do Mar</h2>
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <img src="https://i.imgur.com/CLIENT_ID/beach-store.jpg" class="img-fluid rounded" alt="Fachada da loja Vera Verão Utilidades">
+                        <div class="image-wrapper-quemsomos rounded">
+                           <img src="https://i.imgur.com/CLIENT_ID/kid-on-float.jpg" class="img-fluid" alt="Criança sorrindo em uma boia no mar">
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <p>Localizada de frente para as ondas de Pontal do Paraná, a Vera Verão Utilidades é mais do que uma loja: é o seu ponto de apoio para a felicidade. Nascemos com o propósito de garantir que nenhum momento de lazer seja perdido, oferecendo tudo o que você precisa com praticidade e um atendimento solar.</p>
@@ -161,6 +172,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Hover Effect JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hover-effect@1.0.0/dist/hover-effect.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>

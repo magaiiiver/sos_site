@@ -8,14 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // O offset é para compensar a altura da barra de navegação fixa
                 const offsetTop = targetElement.offsetTop - 70;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
                 });
-
-                // Fecha o menu hambúrguer (se estiver aberto) após o clique
                 const navbarCollapse = document.querySelector('.navbar-collapse');
                 if (navbarCollapse.classList.contains('show')) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse);
@@ -28,22 +25,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Animação de Fade-in ao Rolar ---
     const sections = document.querySelectorAll('section');
     const observerOptions = {
-        root: null, // viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.1 // 10% da seção visível
+        threshold: 0.1
     };
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Para a animação não repetir
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-
     sections.forEach(section => {
         observer.observe(section);
     });
 
+    // --- Filtro da Galeria ---
+    const filterButtons = document.querySelectorAll('#gallery-filters .btn-filter');
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.getAttribute('data-filter');
+            galleryItems.forEach(item => {
+                item.classList.remove('hide');
+                if (filter !== '*' && !item.classList.contains(filter.substring(1))) {
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+
+    // --- Efeito Onda no Hover ---
+    const imageElements = document.querySelectorAll('.gallery-item, #quemsomos .img-fluid');
+    imageElements.forEach((element) => {
+        // Para a galeria, o elemento pai é o container do efeito.
+        // Para a imagem de "Quem Somos", criaremos um wrapper dinamicamente se necessário.
+        let container = element.classList.contains('gallery-item') ? element : element.parentElement;
+
+        new HoverEffect({
+            parent: container,
+            intensity: 0.3,
+            image1: element.querySelector('img') ? element.querySelector('img').src : element.src,
+            image2: element.querySelector('img') ? element.querySelector('img').src : element.src, // Mesma imagem para não trocar
+            displacementImage: 'https://i.imgur.com/CLIENT_ID/wave-texture.png',
+            imagesRatio: 1, // Ajuste conforme a proporção das suas imagens
+        });
+    });
 });

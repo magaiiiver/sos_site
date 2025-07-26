@@ -18,7 +18,7 @@ Paleta "Celebração Solar":
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
@@ -73,6 +73,44 @@ section.visible {
     height: 100vh;
     background: url('https://i.imgur.com/CLIENT_ID/pontal-do-parana-beach.jpg') no-repeat center center/cover;
     position: relative;
+    overflow: hidden; /* Para esconder partes das boias que saem da tela */
+}
+
+/* --- Animação Boias Flutuantes --- */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) translateX(10px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(15px) translateX(-10px) rotate(-5deg);
+    }
+}
+
+.floating-buoy {
+    position: absolute;
+    animation: flutuar 15s ease-in-out infinite;
+    z-index: 1; /* Fica atrás do texto, mas acima do overlay */
+}
+
+.buoy-1 {
+    width: 150px;
+    bottom: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.buoy-2 {
+    width: 120px;
+    top: 15%;
+    right: 8%;
+    animation-duration: 18s; /* Duração diferente para não sincronizar */
+    animation-delay: 2s;
 }
 
 #inicio::before {
@@ -107,21 +145,56 @@ section.visible {
     border-color: #e65a50;
 }
 
-/* --- Seção Produtos --- */
-#produtos .card {
-    border: none;
+/* --- Seção Galeria de Produtos --- */
+.btn-filter {
+    background-color: transparent;
+    border: 2px solid var(--cor-destaque-2);
+    color: var(--cor-destaque-2);
+    font-weight: bold;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--cor-destaque-2);
+    color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.4s ease;
+    width: 100%;
+    height: 250px; /* Altura fixa para consistência */
 }
 
-#produtos .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
+    transition: transform 0.4s ease;
 }
 
-#produtos .card i {
-    color: var(--cor-destaque-2);
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Classes para o filtro */
+.gallery-item.hide {
+    transform: scale(0.9);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 /* --- Seção Quem Somos --- */
@@ -129,8 +202,15 @@ section.visible {
     background-color: #fff;
 }
 
-#quemsomos img {
+.image-wrapper-quemsomos {
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 400px; /* Definir uma altura para o efeito funcionar bem */
+}
+
+.image-wrapper-quemsomos canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* --- Seção Contato --- */
