@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* As regras customizadas de animação de seção foram removidas para evitar conflito com a biblioteca AOS. */
+/* A remoção das regras 'section' e 'section.visible' é a correção. */
 
 
 /* --- Cabeçalho e Navegação --- */
