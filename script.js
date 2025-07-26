@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // O código de animação de fade-in com IntersectionObserver foi removido
-    // pois a biblioteca AOS agora controla essas animações.
+    // Validação: O código do IntersectionObserver não está presente.
+    // A inicialização do AOS está no final do arquivo.
 
     // --- Efeito Onda no Hover (Apenas para 'Quem Somos' agora) ---
     const quemSomosImage = document.querySelector('#quemsomos .img-fluid');
