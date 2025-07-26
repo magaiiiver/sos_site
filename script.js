@@ -72,4 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // --- Inicialização do AOS ---
+    AOS.init();
 });
