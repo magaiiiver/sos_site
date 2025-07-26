@@ -50,8 +50,9 @@ section.visible {
     color: var(--cor-principal) !important;
 }
 
-.logo {
-    max-height: 40px; /* Ajuste a altura conforme necessário */
+header nav .logo {
+  max-height: 40px !important; /* Reduzindo para um valor mais adequado */
+  width: auto;
 }
 
 .nav-link {
@@ -100,7 +101,10 @@ section.visible {
     position: absolute;
     animation: flutuar 15s ease-in-out infinite;
     z-index: 1; /* Fica atrás do texto, mas acima do overlay */
-    transform: scale(1.15);
+}
+
+.boia-flutuante {
+  transform: scale(1.15);
 }
 
 .buoy-1 {
@@ -171,8 +175,8 @@ section.visible {
 }
 
 .nav-tabs .nav-link.active {
-    background-color: var(--cor-principal);
-    color: #fff;
+    background-color: #FF6F61 !important; /* CORAL */
+    color: #FFFFFF !important;           /* BRANCO */
     border-radius: 5px 5px 0 0;
 }
 
@@ -208,13 +212,12 @@ section.visible {
 
 /* --- Seção de Destaque Churrasco --- */
 #destaque-churrasco {
-    padding: 100px 0;
-    background-image: url('https://i.imgur.com/py9cwkr.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  background-image: url('https://i.imgur.com/py9cwkr.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Isso cria o efeito parallax */
+  position: relative;
+  padding: 100px 0;
 }
 
 #destaque-churrasco .container {
