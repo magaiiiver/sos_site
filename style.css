@@ -1,0 +1,150 @@
+/*
+Folha de Estilos - Vera Verão Utilidades
+Paleta "Celebração Solar":
+- Coral Vibrante: #FF6F61
+- Amarelo Solar: #FFD166
+- Turquesa: #118AB2
+- Fundo Areia/Off-white: #FCF6F5
+- Texto Cinza Escuro: #333333
+*/
+
+/* --- Variáveis de Cor e Estilos Gerais --- */
+:root {
+    --cor-principal: #FF6F61;
+    --cor-destaque-1: #FFD166;
+    --cor-destaque-2: #118AB2;
+    --cor-fundo: #FCF6F5;
+    --cor-texto: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Cabeçalho e Navegação --- */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--cor-principal) !important;
+}
+
+.nav-link {
+    color: var(--cor-texto) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--cor-principal) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--cor-principal);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FF6F61' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* --- Seção Início (Herói) --- */
+#inicio {
+    height: 100vh;
+    background: url('https://i.imgur.com/CLIENT_ID/pontal-do-parana-beach.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#inicio .container {
+    position: relative;
+    z-index: 2;
+}
+
+#inicio h1, #inicio h2 {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e65a50;
+    border-color: #e65a50;
+}
+
+/* --- Seção Produtos --- */
+#produtos .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#produtos .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#produtos .card i {
+    color: var(--cor-destaque-2);
+}
+
+/* --- Seção Quem Somos --- */
+#quemsomos {
+    background-color: #fff;
+}
+
+#quemsomos img {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Seção Contato --- */
+#contato i {
+    color: var(--cor-principal);
+    width: 20px;
+    text-align: center;
+}
+
+#contato .list-unstyled li {
+    font-size: 1.1rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--cor-destaque-2);
+}
