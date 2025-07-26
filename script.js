@@ -41,38 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // --- Filtro da Galeria ---
-    const filterButtons = document.querySelectorAll('#gallery-filters .btn-filter');
-    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            const filter = this.getAttribute('data-filter');
-            galleryItems.forEach(item => {
-                item.classList.remove('hide');
-                if (filter !== '*' && !item.classList.contains(filter.substring(1))) {
-                    item.classList.add('hide');
-                }
-            });
-        });
-    });
-
-    // --- Efeito Onda no Hover ---
-    const imageElements = document.querySelectorAll('.gallery-item, #quemsomos .img-fluid');
-    imageElements.forEach((element) => {
-        // Para a galeria, o elemento pai é o container do efeito.
-        // Para a imagem de "Quem Somos", criaremos um wrapper dinamicamente se necessário.
-        let container = element.classList.contains('gallery-item') ? element : element.parentElement;
-
+    // --- Efeito Onda no Hover (Apenas para 'Quem Somos' agora) ---
+    const quemSomosImage = document.querySelector('#quemsomos .img-fluid');
+    if (quemSomosImage) {
         new HoverEffect({
-            parent: container,
+            parent: quemSomosImage.parentElement,
             intensity: 0.3,
-            image1: element.querySelector('img') ? element.querySelector('img').src : element.src,
-            image2: element.querySelector('img') ? element.querySelector('img').src : element.src, // Mesma imagem para não trocar
+            image1: quemSomosImage.src,
+            image2: quemSomosImage.src,
             displacementImage: 'https://i.imgur.com/CLIENT_ID/wave-texture.png',
-            imagesRatio: 1, // Ajuste conforme a proporção das suas imagens
+            imagesRatio: 1,
         });
-    });
+    }
 });

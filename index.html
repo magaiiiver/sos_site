@@ -50,8 +50,8 @@
         <!-- Início da Seção Início -->
         <section id="inicio" class="d-flex align-items-center text-center position-relative">
             <!-- Boias Flutuantes -->
-            <img src="https://i.imgur.com/CLIENT_ID/float1.png" class="floating-buoy buoy-1" alt="Boia colorida flutuando">
-            <img src="https://i.imgur.com/CLIENT_ID/float2.png" class="floating-buoy buoy-2" alt="Boia de flamingo flutuando">
+            <img src="https://i.imgur.com/L4e7u80.png" class="floating-buoy buoy-1" alt="Boia de Flamingo flutuando">
+            <img src="https://i.imgur.com/85qx4C1.png" class="floating-buoy buoy-2" alt="Boia de Unicórnio flutuando">
 
             <div class="container">
                 <h1 class="display-3">Seu verão, sua festa, seu lazer.</h1>
@@ -61,66 +61,249 @@
         </section>
         <!-- Fim da Seção Início -->
 
-        <!-- Início da Seção Galeria de Produtos -->
+        <!-- Início da Nova Seção de Produtos com Abas -->
         <section id="produtos" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Um Mar de Possibilidades</h2>
 
-                <!-- Filtros da Galeria -->
-                <div id="gallery-filters" class="text-center mb-4">
-                    <button class="btn btn-filter active" data-filter="*">Todos</button>
-                    <button class="btn btn-filter" data-filter=".praia">Praia</button>
-                    <button class="btn btn-filter" data-filter=".festa">Festa</button>
-                    <button class="btn btn-filter" data-filter=".churrasco">Churrasco</button>
-                    <button class="btn btn-filter" data-filter=".tecnologia">Tecnologia</button>
-                </div>
+                <!-- Navegação das Abas -->
+                <ul class="nav nav-tabs justify-content-center" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="praia-tab" data-bs-toggle="tab" data-bs-target="#praia" type="button" role="tab" aria-controls="praia" aria-selected="true">Praia</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="festa-tab" data-bs-toggle="tab" data-bs-target="#festa" type="button" role="tab" aria-controls="festa" aria-selected="false">Festa</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="churrasco-tab" data-bs-toggle="tab" data-bs-target="#churrasco" type="button" role="tab" aria-controls="churrasco" aria-selected="false">Churrasco</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tecnologia-tab" data-bs-toggle="tab" data-bs-target="#tecnologia" type="button" role="tab" aria-controls="tecnologia" aria-selected="false">Tecnologia</button>
+                    </li>
+                </ul>
 
-                <!-- Grade da Galeria -->
-                <div class="gallery-grid">
-                    <!-- Praia -->
-                    <div class="gallery-item praia">
-                        <img src="https://i.imgur.com/CLIENT_ID/praia1.jpg" alt="Cadeira de praia e guarda-sol">
+                <!-- Conteúdo das Abas -->
+                <div class="tab-content mt-4" id="productTabsContent">
+                    <!-- Aba Praia -->
+                    <div class="tab-pane fade show active" id="praia" role="tabpanel" aria-labelledby="praia-tab">
+                        <div class="row">
+                            <!-- Produtos da Praia -->
+                            <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cadeira de Praia Alumínio</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Guarda-Sol 2m com Proteção UV</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Boia Infantil de Braço</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kit Frescobol de Madeira</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Caixa Térmica 32L</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Esteira de Praia Dobrável</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item praia">
-                        <img src="https://i.imgur.com/CLIENT_ID/praia2.jpg" alt="Boia de flamingo no mar">
+                    <!-- Aba Festa -->
+                    <div class="tab-pane fade" id="festa" role="tabpanel" aria-labelledby="festa-tab">
+                        <div class="row">
+                            <!-- Produtos de Festa -->
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kit 50 Balões Coloridos</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vela de Aniversário Numérica</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Toalha de Mesa Temática</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pratos e Copos Descartáveis</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Língua de Sogra (10 un.)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chapéu de Aniversário</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item praia">
-                        <img src="https://i.imgur.com/CLIENT_ID/praia3.jpg" alt="Kit de frescobol na areia">
+                    <!-- Aba Churrasco -->
+                    <div class="tab-pane fade" id="churrasco" role="tabpanel" aria-labelledby="churrasco-tab">
+                        <div class="row">
+                            <!-- Produtos de Churrasco -->
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Faca do Chef 8"</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Garfo Trinchante Inox</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Grelha Moeda 50x40cm</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tábua de Corte de Bambu</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pegador de Carvão</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Acendedor Elétrico</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Festa -->
-                    <div class="gallery-item festa">
-                        <img src="https://i.imgur.com/CLIENT_ID/festa1.jpg" alt="Mesa de aniversário decorada">
-                    </div>
-                    <div class="gallery-item festa">
-                        <img src="https://i.imgur.com/CLIENT_ID/festa2.jpg" alt="Bolo com velas">
-                    </div>
-                    <div class="gallery-item festa">
-                        <img src="https://i.imgur.com/CLIENT_ID/festa3.jpg" alt="Crianças com confetes">
-                    </div>
-                    <!-- Churrasco -->
-                    <div class="gallery-item churrasco">
-                        <img src="https://i.imgur.com/CLIENT_ID/churrasco1.jpg" alt="Grelha com carnes">
-                    </div>
-                    <div class="gallery-item churrasco">
-                        <img src="https://i.imgur.com/CLIENT_ID/churrasco2.jpg" alt="Faca de churrasco">
-                    </div>
-                    <div class="gallery-item churrasco">
-                        <img src="https://i.imgur.com/CLIENT_ID/churrasco3.jpg" alt="Pessoas em churrasco">
-                    </div>
-                    <!-- Tecnologia -->
-                    <div class="gallery-item tecnologia">
-                        <img src="https://i.imgur.com/CLIENT_ID/tech1.jpg" alt="Caixa de som na praia">
-                    </div>
-                    <div class="gallery-item tecnologia">
-                        <img src="https://i.imgur.com/CLIENT_ID/tech2.jpg" alt="Power bank carregando celular">
-                    </div>
-                    <div class="gallery-item tecnologia">
-                        <img src="https://i.imgur.com/CLIENT_ID/tech3.jpg" alt="Ring light">
+                    <!-- Aba Tecnologia -->
+                    <div class="tab-pane fade" id="tecnologia" role="tabpanel" aria-labelledby="tecnologia-tab">
+                        <div class="row">
+                            <!-- Produtos de Tecnologia -->
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Carregador Turbo USB-C 20W</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Caixa de Som Bluetooth 5.0</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ring Light de Mesa 10"</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Power Bank 10.000mAh</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fone de Ouvido sem Fio</h5>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mouse Óptico USB</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Fim da Seção Galeria de Produtos -->
+        <!-- Fim da Nova Seção de Produtos com Abas -->
 
         <!-- Início da Seção Quem Somos -->
         <section id="quemsomos" class="py-5 bg-light">
@@ -129,7 +312,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="image-wrapper-quemsomos rounded">
-                           <img src="https://i.imgur.com/CLIENT_ID/kid-on-float.jpg" class="img-fluid" alt="Criança sorrindo em uma boia no mar">
+                           <img src="https://i.imgur.com/BRqcxGY.jpg" class="img-fluid" alt="Criança sorrindo em uma boia no mar">
                         </div>
                     </div>
                     <div class="col-md-6">
