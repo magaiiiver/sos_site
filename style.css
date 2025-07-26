@@ -50,6 +50,10 @@ section.visible {
     color: var(--cor-principal) !important;
 }
 
+.logo {
+    max-height: 40px; /* Ajuste a altura conforme necessário */
+}
+
 .nav-link {
     color: var(--cor-texto) !important;
     transition: color 0.3s;
@@ -96,6 +100,7 @@ section.visible {
     position: absolute;
     animation: flutuar 15s ease-in-out infinite;
     z-index: 1; /* Fica atrás do texto, mas acima do overlay */
+    transform: scale(1.15);
 }
 
 .buoy-1 {
@@ -200,6 +205,26 @@ section.visible {
     color: var(--cor-texto);
     font-weight: 600;
 }
+
+/* --- Seção de Destaque Churrasco --- */
+#destaque-churrasco {
+    padding: 100px 0;
+    background-image: url('https://i.imgur.com/py9cwkr.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#destaque-churrasco .container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+}
+
 
 /* --- Seção Quem Somos --- */
 #quemsomos {
