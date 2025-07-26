@@ -22,24 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Animação de Fade-in ao Rolar ---
-    const sections = document.querySelectorAll('section');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    // O código de animação de fade-in com IntersectionObserver foi removido
+    // pois a biblioteca AOS agora controla essas animações.
 
     // --- Efeito Onda no Hover (Apenas para 'Quem Somos' agora) ---
     const quemSomosImage = document.querySelector('#quemsomos .img-fluid');
