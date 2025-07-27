@@ -25,7 +25,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validação: O código do IntersectionObserver não está presente.
     // A inicialização do AOS está no final do arquivo.
 
-    // --- Código do HoverEffect removido para corrigir erro no console ---
+    // --- Efeito Onda no Hover (Apenas para 'Quem Somos' agora) ---
+    const quemSomosImage = document.querySelector('#quemsomos .img-fluid');
+    if (quemSomosImage) {
+        new HoverEffect({
+            parent: quemSomosImage.parentElement,
+            intensity: 0.3,
+            image1: quemSomosImage.src,
+            image2: quemSomosImage.src,
+            displacementImage: 'https://i.imgur.com/py9cwkr.jpg', // Usando uma imagem de deslocamento válida
+            imagesRatio: 1,
+        });
+    }
 
     // --- Funcionalidade do Botão de Destaque Churrasco ---
     const btnVerChurrasco = document.getElementById('btn-ver-churrasco');
