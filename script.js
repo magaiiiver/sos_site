@@ -22,10 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Validação: O código do IntersectionObserver não está presente.
-    // A inicialização do AOS está no final do arquivo.
-
-    // O código do HoverEffect foi permanentemente removido.
+    // --- Inicialização do AOS ---
+    AOS.init();
 
     // --- Funcionalidade do Botão de Destaque Churrasco ---
     const btnVerChurrasco = document.getElementById('btn-ver-churrasco');
@@ -45,9 +43,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // --- Inicialização do AOS ---
-    AOS.init();
-
-    // O ajuste de velocidade do vídeo foi removido.
 });

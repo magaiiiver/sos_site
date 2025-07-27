@@ -121,8 +121,8 @@ header nav .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(1.5px);
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px); /* Efeito de desfoque */
 }
 
 #inicio .container {
@@ -132,7 +132,6 @@ header nav .logo {
 
 #inicio h1, #inicio h2 {
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn-primary {
@@ -205,13 +204,8 @@ header nav .logo {
 }
 
 /* --- Seção de Destaque Churrasco --- */
-#produtos, #destaque-churrasco, #quemsomos {
+#produtos, #destaque-churrasco, #quemsomos, #contato {
     padding: 80px 5%;
-}
-
-#contato {
-    padding: 80px 5%;
-    padding-bottom: 75px;
 }
 
 #destaque-churrasco {
@@ -228,7 +222,6 @@ header nav .logo {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 15px;
-    backdrop-filter: blur(2px);
 }
 
 
@@ -243,58 +236,17 @@ header nav .logo {
     height: 400px; /* Definir uma altura para o efeito funcionar bem */
 }
 
-#contato iframe {
-    position: relative;
-    z-index: 2;
-    border-radius: 15px; /* Para combinar com o container */
-}
+/* Estilos do canvas do HoverEffect foram removidos permanentemente. */
 
 /* --- Seção Contato --- */
 #contato {
+    background-color: var(--cor-destaque-2); /* Turquesa */
     color: #fff;
     overflow: hidden;
-    position: relative; /* Necessário para o z-index do vídeo funcionar */
 }
 
-.contact-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.contact-content-overlay {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay para legibilidade */
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-@keyframes flutuar-contato {
-    0% {
-        transform: translateX(-100%) translateY(20px) rotate(-15deg);
-    }
-    100% {
-        transform: translateX(120vw) translateY(-20px) rotate(15deg);
-    }
-}
-
-.floating-contact-buoy {
-    position: absolute;
-    width: 100px;
-    top: 10%;
-    left: 0;
-    z-index: 0;
-    animation: flutuar-contato 25s linear infinite;
-}
-
-#contato h2, #contato .list-unstyled li {
+#contato h2 {
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #contato a {
@@ -308,8 +260,10 @@ header nav .logo {
 }
 
 .contact-logo {
-    max-height: 100px;
+    max-height: 150px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #contato .list-unstyled li {
@@ -319,12 +273,7 @@ header nav .logo {
 
 /* --- Rodapé --- */
 footer {
-    background-image: url('https://www.transparenttextures.com/patterns/sand.png');
-    background-color: #F5E6CC; /* Fallback de cor */
-}
-
-footer p {
-    color: #6B4F4F; /* Marrom escuro */
+    background-color: #0D1B2A; /* Azul bem escuro */
 }
 
 .footer-logo img {
@@ -332,25 +281,24 @@ footer p {
 }
 
 .footer-social .social-icon {
-    color: #6B4F4F; /* Marrom escuro */
+    color: #fff;
     font-size: 1.5rem;
     margin-left: 15px;
     transition: color 0.3s ease;
 }
 
 .footer-social .social-icon:hover {
-    color: var(--cor-principal); /* Coral Vibrante */
+    color: var(--cor-destaque-1); /* Amarelo Solar */
 }
 
 .footer-link {
-    color: var(--cor-principal); /* Laranja/Coral */
-    font-weight: bold;
+    color: var(--cor-destaque-1);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #6B4F4F; /* Marrom escuro */
+    color: #fff;
 }
 
 /* --- Media Queries para Responsividade --- */
@@ -364,3 +312,5 @@ footer p {
 @media (max-width: 768px) {
     /* Estilos para celulares aqui */
 }
+
+[end of style.css]
