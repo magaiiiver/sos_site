@@ -274,36 +274,21 @@ header nav .logo {
 }
 
 @keyframes flutuar-contato {
-  0%   { transform: translateY(0) rotate(0deg); }
-  10%  { transform: translateY(-2px) rotate(-0.2deg); }
-  20%  { transform: translateY(3px) rotate(0.1deg); }
-  30%  { transform: translateY(-1px) rotate(0.3deg); }
-  40%  { transform: translateY(2px) rotate(-0.1deg); }
-  50%  { transform: translateY(0px) rotate(0deg); }
-  60%  { transform: translateY(-3px) rotate(0.2deg); }
-  70%  { transform: translateY(1px) rotate(-0.3deg); }
-  80%  { transform: translateY(-2px) rotate(0.1deg); }
-  90%  { transform: translateY(2px) rotate(-0.2deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+    0% {
+        transform: translateX(-100%) translateY(20px) rotate(-15deg);
+    }
+    100% {
+        transform: translateX(120vw) translateY(-20px) rotate(15deg);
+    }
 }
 
-.floating-contact-buoy-1, .floating-contact-buoy-2 {
+.floating-contact-buoy {
     position: absolute;
     width: 100px;
-    z-index: 0;
-    animation: flutuar-contato 20s ease-in-out infinite;
-}
-
-.floating-contact-buoy-1 {
-    top: 10%;
-    left: 5%;
-    animation-duration: 60s;
-}
-
-.floating-contact-buoy-2 {
     bottom: 10%;
-    right: 5%;
-    animation-duration: 30s;
+    left: 0;
+    z-index: 0;
+    animation: flutuar-contato 25s linear infinite;
 }
 
 #contato h2, #contato .list-unstyled li {
