@@ -203,13 +203,16 @@ header nav .logo {
 }
 
 /* --- Seção de Destaque Churrasco --- */
+#produtos, #destaque-churrasco, #quemsomos, #contato {
+    padding: 80px 5%;
+}
+
 #destaque-churrasco {
   background-image: url('https://i.imgur.com/py9cwkr.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed; /* Isso cria o efeito parallax */
   position: relative;
-  padding: 100px 0;
 }
 
 #destaque-churrasco .container {
@@ -248,6 +251,21 @@ header nav .logo {
 /* --- Rodapé --- */
 footer {
     background-color: var(--cor-destaque-2);
+}
+
+.footer-logo img {
+    max-height: 30px;
+}
+
+.footer-social .social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: var(--cor-destaque-1); /* Amarelo Solar */
 }
 
 /* --- Media Queries para Responsividade --- */
