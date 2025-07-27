@@ -232,10 +232,7 @@ header nav .logo {
     height: 400px; /* Definir uma altura para o efeito funcionar bem */
 }
 
-.image-wrapper-quemsomos canvas {
-    width: 100% !important;
-    height: 100% !important;
-}
+/* Estilos do canvas do HoverEffect foram removidos permanentemente. */
 
 /* --- Seção Contato --- */
 #contato i {
