@@ -65,6 +65,62 @@
         </section>
         <!-- Fim da Seção Início -->
 
+        <!-- Início da Seção de Destaques -->
+        <section id="destaques" class="py-5 bg-light" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-5">Mais Vendidos e Promoções</h2>
+
+                <!-- Navegação das Abas de Destaques -->
+                <ul class="nav nav-tabs justify-content-center" id="highlightTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="vendidos-tab" data-bs-toggle="tab" data-bs-target="#vendidos" type="button" role="tab" aria-controls="vendidos" aria-selected="true">Mais Vendidos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="promocoes-tab" data-bs-toggle="tab" data-bs-target="#promocoes" type="button" role="tab" aria-controls="promocoes" aria-selected="false">Promoções</button>
+                    </li>
+                </ul>
+
+                <!-- Conteúdo das Abas de Destaques -->
+                <div class="tab-content mt-4" id="highlightTabsContent">
+                    <!-- Aba Mais Vendidos -->
+                    <div class="tab-pane fade show active" id="vendidos" role="tabpanel" aria-labelledby="vendidos-tab">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-up">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto em destaque">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cadeira de Praia Alumínio</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-up">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto em destaque">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Caixa de Som Bluetooth 5.0</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Aba Promoções -->
+                    <div class="tab-pane fade" id="promocoes" role="tabpanel" aria-labelledby="promocoes-tab">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-up">
+                                <div class="card product-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lRbS7eKYzDq-Ftxc1p8G_TTw2unWBMEYUw&s" class="card-img-top" alt="Produto em promoção">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kit Frescobol de Madeira</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Seção de Destaques -->
+
         <!-- Início da Nova Seção de Produtos com Abas -->
         <section id="produtos" class="py-5" data-aos="fade-up">
             <div class="container">
@@ -362,10 +418,7 @@
 
     <!-- Início do Rodapé -->
     <footer class="text-white py-4">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-            <div class="footer-logo">
-                <img src="https://i.imgur.com/vUxII6o.png" alt="Logo Vera Verão Utilidades em tamanho pequeno">
-            </div>
+        <div class="container d-flex justify-content-around align-items-center flex-wrap">
             <div class="footer-copyright text-center">
                 <p class="mb-0">© 2025 Vera Verão Utilidades. Todos os direitos reservados.</p>
             </div>

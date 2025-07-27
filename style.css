@@ -265,7 +265,7 @@ header nav .logo {
 
 /* --- Rodapé --- */
 footer {
-    background-color: var(--cor-destaque-2);
+    background-color: #0D1B2A; /* Azul bem escuro */
 }
 
 .footer-logo img {
