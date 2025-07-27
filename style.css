@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Cabeçalho e Navegação --- */
 .navbar {
-    transition: background-color 0.3s ease;
+    transition: background-color: 0.3s ease;
 }
 
 .navbar-brand {
@@ -132,6 +132,7 @@ header nav .logo {
 
 #inicio h1, #inicio h2 {
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn-primary {
@@ -262,8 +263,6 @@ header nav .logo {
 .contact-logo {
     max-height: 150px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #contato .list-unstyled li {
