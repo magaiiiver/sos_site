@@ -205,8 +205,13 @@ header nav .logo {
 }
 
 /* --- Seção de Destaque Churrasco --- */
-#produtos, #destaque-churrasco, #quemsomos, #contato {
+#produtos, #destaque-churrasco, #quemsomos {
     padding: 80px 5%;
+}
+
+#contato {
+    padding: 80px 5%;
+    padding-bottom: 75px; /* 80px - 5px */
 }
 
 #destaque-churrasco {
@@ -280,7 +285,7 @@ header nav .logo {
 .floating-contact-buoy {
     position: absolute;
     width: 100px;
-    bottom: 10%;
+    top: 10%;
     left: 0;
     z-index: 0;
     animation: flutuar-contato 25s linear infinite;
@@ -302,7 +307,7 @@ header nav .logo {
 }
 
 .contact-logo {
-    max-height: 150px;
+    max-height: 100px;
     display: block;
 }
 
@@ -313,9 +318,9 @@ header nav .logo {
 
 /* --- Rodapé --- */
 footer {
-    background-color: #F5E6CC; /* Bege claro */
     background-image: url('https://www.transparenttextures.com/patterns/sand.png');
-    color: #8B4513; /* Marrom */
+    background-color: #F5E6CC; /* Fallback de cor */
+    color: #6B4F4F; /* Marrom escuro */
 }
 
 .footer-logo img {
@@ -323,7 +328,7 @@ footer {
 }
 
 .footer-social .social-icon {
-    color: #8B4513; /* Marrom */
+    color: #6B4F4F; /* Marrom escuro */
     font-size: 1.5rem;
     margin-left: 15px;
     transition: color 0.3s ease;
@@ -334,14 +339,14 @@ footer {
 }
 
 .footer-link {
-    color: #8B4513; /* Marrom */
+    color: var(--cor-principal); /* Laranja/Coral */
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: var(--cor-principal); /* Coral Vibrante */
+    color: #6B4F4F; /* Marrom escuro */
 }
 
 /* --- Media Queries para Responsividade --- */
