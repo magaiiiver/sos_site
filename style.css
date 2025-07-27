@@ -68,7 +68,7 @@ header nav .logo {
 /* --- Seção Início (Herói) --- */
 #inicio {
     height: 100vh;
-    background: url('https://i.imgur.com/CLIENT_ID/pontal-do-parana-beach.jpg') no-repeat center center/cover;
+    background: url('https://i.imgur.com/4u0ztxD.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden; /* Para esconder partes das boias que saem da tela */
 }
@@ -121,7 +121,8 @@ header nav .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px); /* Efeito de desfoque */
 }
 
 #inicio .container {
@@ -238,14 +239,28 @@ header nav .logo {
 /* Estilos do canvas do HoverEffect foram removidos permanentemente. */
 
 /* --- Seção Contato --- */
+#contato {
+    background-color: var(--cor-destaque-2); /* Turquesa */
+    color: #fff;
+}
+
+#contato h2 {
+    color: #fff;
+}
+
+#contato a {
+    color: var(--cor-destaque-1); /* Amarelo Solar para links */
+}
+
 #contato i {
-    color: var(--cor-principal);
+    color: #fff;
     width: 20px;
     text-align: center;
 }
 
 #contato .list-unstyled li {
     font-size: 1.1rem;
+    color: #fff;
 }
 
 /* --- Rodapé --- */
