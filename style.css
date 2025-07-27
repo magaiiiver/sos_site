@@ -302,7 +302,7 @@ header nav .logo {
 }
 
 .contact-logo {
-    max-height: 250px;
+    max-height: 150px;
     display: block;
 }
 
@@ -313,7 +313,9 @@ header nav .logo {
 
 /* --- Rodapé --- */
 footer {
-    background-color: #0D1B2A; /* Azul bem escuro */
+    background-color: #F5E6CC; /* Bege claro */
+    background-image: url('https://www.transparenttextures.com/patterns/sand.png');
+    color: #6B4F4F; /* Marrom escuro */
 }
 
 .footer-logo img {
@@ -321,24 +323,25 @@ footer {
 }
 
 .footer-social .social-icon {
-    color: #fff;
+    color: #6B4F4F; /* Marrom escuro */
     font-size: 1.5rem;
     margin-left: 15px;
     transition: color 0.3s ease;
 }
 
 .footer-social .social-icon:hover {
-    color: var(--cor-destaque-1); /* Amarelo Solar */
+    color: var(--cor-principal); /* Coral Vibrante */
 }
 
 .footer-link {
-    color: var(--cor-destaque-1);
+    color: #6B4F4F; /* Marrom escuro */
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #fff;
+    color: var(--cor-principal); /* Coral Vibrante */
 }
 
 /* --- Media Queries para Responsividade --- */
