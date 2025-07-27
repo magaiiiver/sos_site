@@ -211,7 +211,7 @@ header nav .logo {
 
 #contato {
     padding: 80px 5%;
-    padding-bottom: 75px; /* 80px - 5px */
+    margin-bottom: -5px;
 }
 
 #destaque-churrasco {
