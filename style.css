@@ -15,6 +15,7 @@ Paleta "Celebração Solar":
     --cor-destaque-2: #118AB2;
     --cor-fundo: #FCF6F5;
     --cor-texto: #333333;
+    --cor-marrom-escuro: #6B4F4F;
 }
 
 body {
@@ -40,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header nav .logo {
-  max-height: 40px !important; /* Reduzindo para um valor mais adequado */
+  max-height: 40px !important;
   width: auto;
 }
 
@@ -67,57 +68,38 @@ header nav .logo {
     height: 100vh;
     background: url('https://i.imgur.com/4u0ztxD.png') no-repeat center center/cover;
     position: relative;
-    overflow: hidden; /* Para esconder partes das boias que saem da tela */
+    overflow: hidden;
 }
 
-/* --- Animação Boias Flutuantes --- */
 @keyframes flutuar {
-    0%, 100% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-    }
-    25% {
-        transform: translateY(-15px) translateX(10px) rotate(5deg);
-    }
-    50% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-    }
-    75% {
-        transform: translateY(15px) translateX(-10px) rotate(-5deg);
-    }
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
 }
 
 .floating-buoy {
     position: absolute;
     animation: flutuar 15s ease-in-out infinite;
-    z-index: 1; /* Fica atrás do texto, mas acima do overlay */
-}
-
-.boia-flutuante {
-  transform: scale(1.15);
+    z-index: 1;
 }
 
 .buoy-1 {
     width: 150px;
     bottom: 10%;
     left: 5%;
-    animation-delay: 0s;
+    animation-duration: 18s;
 }
 
 .buoy-2 {
     width: 120px;
     top: 15%;
     right: 8%;
-    animation-duration: 18s; /* Duração diferente para não sincronizar */
     animation-delay: 2s;
 }
 
 #inicio::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(1.5px);
 }
@@ -132,20 +114,12 @@ header nav .logo {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.btn-primary {
-    background-color: var(--cor-principal);
-    border-color: var(--cor-principal);
-    padding: 12px 24px;
-    font-weight: bold;
-    transition: background-color 0.3s, border-color 0.3s;
+/* --- Seções Gerais --- */
+#destaques, #destaque-churrasco, #produtos, #quemsomos, #contato {
+    padding: 80px 5%;
 }
 
-.btn-primary:hover {
-    background-color: #e65a50;
-    border-color: #e65a50;
-}
-
-/* --- Nova Seção de Produtos com Abas --- */
+/* --- Destaques e Produtos --- */
 .nav-tabs {
     border-bottom: 2px solid var(--cor-destaque-2);
 }
@@ -166,13 +140,9 @@ header nav .logo {
 }
 
 .nav-tabs .nav-link.active {
-    background-color: #FF6F61 !important; /* CORAL */
-    color: #FFFFFF !important;           /* BRANCO */
+    background-color: var(--cor-principal);
+    color: #FFFFFF !important;
     border-radius: 5px 5px 0 0;
-}
-
-.tab-content > .tab-pane {
-    transition: opacity 0.4s ease-in-out;
 }
 
 .product-card {
@@ -201,21 +171,12 @@ header nav .logo {
     font-weight: 600;
 }
 
-/* --- Seção de Destaque Churrasco --- */
-#produtos, #destaque-churrasco, #quemsomos {
-    padding: 80px 5%;
-}
-
-#contato {
-    padding: 80px 5%;
-    padding-bottom: 75px;
-}
-
+/* --- Seção Destaque Churrasco --- */
 #destaque-churrasco {
   background-image: url('https://i.imgur.com/py9cwkr.jpg');
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; /* Isso cria o efeito parallax */
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -234,23 +195,12 @@ header nav .logo {
     background-color: #fff;
 }
 
-.image-wrapper-quemsomos {
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    height: 400px; /* Definir uma altura para o efeito funcionar bem */
-}
-
-#contato iframe {
-    position: relative;
-    z-index: 2;
-    border-radius: 15px; /* Para combinar com o container */
-}
-
 /* --- Seção Contato --- */
 #contato {
     color: #fff;
     overflow: hidden;
-    position: relative; /* Necessário para o z-index do vídeo funcionar */
+    position: relative;
+    padding-bottom: 75px; /* 80px - 5px */
 }
 
 .contact-video-bg {
@@ -266,7 +216,7 @@ header nav .logo {
 .contact-content-overlay {
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay para legibilidade */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: 15px;
 }
@@ -276,14 +226,10 @@ header nav .logo {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-#contato a {
-    color: var(--cor-destaque-1); /* Amarelo Solar para links */
-}
-
-#contato i {
-    color: #fff;
-    width: 20px;
-    text-align: center;
+#contato iframe {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
 }
 
 .contact-logo {
@@ -291,39 +237,29 @@ header nav .logo {
     display: block;
 }
 
-#contato .list-unstyled li {
-    font-size: 1.1rem;
-    color: #fff;
-}
-
 /* --- Rodapé --- */
 footer {
     background-image: url('https://www.transparenttextures.com/patterns/sand.png');
-    background-color: #F5E6CC; /* Fallback de cor */
+    background-color: #F5E6CC; /* Bege claro */
 }
 
 footer p {
-    color: #6B4F4F; /* Marrom escuro */
+    color: var(--cor-marrom-escuro);
 }
 
 .footer-social .social-icon {
-    color: #6B4F4F; /* Marrom escuro */
+    color: var(--cor-marrom-escuro);
     font-size: 1.5rem;
     margin-left: 15px;
     transition: color 0.3s ease;
 }
 
-.footer-social .social-icon:hover {
-    color: var(--cor-principal); /* Coral Vibrante */
-}
-
 .footer-link {
     color: var(--cor-principal); /* Laranja/Coral */
-    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-link:hover {
-    color: #6B4F4F; /* Marrom escuro */
+.footer-link:hover, .footer-social .social-icon:hover {
+    color: var(--cor-marrom-escuro);
 }

@@ -43,4 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // --- Ajuste de Velocidade do Vídeo de Contato ---
+    const contactVideo = document.querySelector('.contact-video-bg');
+    if (contactVideo) {
+        contactVideo.playbackRate = 0.5;
+    }
 });
