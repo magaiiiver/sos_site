@@ -222,6 +222,7 @@ header nav .logo {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 15px;
+    backdrop-filter: blur(2px);
 }
 
 
