@@ -121,8 +121,8 @@ header nav .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(3px); /* Efeito de desfoque */
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1.5px);
 }
 
 #inicio .container {
@@ -132,6 +132,7 @@ header nav .logo {
 
 #inicio h1, #inicio h2 {
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn-primary {
@@ -243,6 +244,26 @@ header nav .logo {
 #contato {
     background-color: var(--cor-destaque-2); /* Turquesa */
     color: #fff;
+    overflow: hidden;
+}
+
+@keyframes flutuar-contato {
+    0% {
+        transform: translateX(-100%) translateY(20px) rotate(-15deg);
+    }
+    100% {
+        transform: translateX(120vw) translateY(-20px) rotate(15deg);
+    }
+}
+
+.floating-contact-buoy {
+    position: absolute;
+    width: 100px;
+    bottom: 10%;
+    left: 0;
+    z-index: 0;
+    animation: flutuar-contato 25s linear infinite;
+    opacity: 0.2;
 }
 
 #contato h2 {
@@ -257,6 +278,13 @@ header nav .logo {
     color: #fff;
     width: 20px;
     text-align: center;
+}
+
+.contact-logo {
+    max-height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #contato .list-unstyled li {
