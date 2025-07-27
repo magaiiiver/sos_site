@@ -211,7 +211,7 @@ header nav .logo {
 
 #contato {
     padding: 80px 5%;
-    margin-bottom: -5px;
+    padding-bottom: 75px;
 }
 
 #destaque-churrasco {
@@ -251,26 +251,9 @@ header nav .logo {
 
 /* --- Seção Contato --- */
 #contato {
+    background-color: var(--cor-destaque-2); /* Turquesa */
     color: #fff;
     overflow: hidden;
-}
-
-.contact-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.contact-content-overlay {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay para legibilidade */
-    padding: 2rem;
-    border-radius: 15px;
 }
 
 @keyframes flutuar-contato {
@@ -285,7 +268,7 @@ header nav .logo {
 .floating-contact-buoy {
     position: absolute;
     width: 100px;
-    bottom: 10%;
+    top: 10%;
     left: 0;
     z-index: 0;
     animation: flutuar-contato 25s linear infinite;
