@@ -238,7 +238,11 @@ header nav .logo {
     height: 400px; /* Definir uma altura para o efeito funcionar bem */
 }
 
-/* Estilos do canvas do HoverEffect foram removidos permanentemente. */
+#contato iframe {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px; /* Para combinar com o container */
+}
 
 /* --- Seção Contato --- */
 #contato {
@@ -282,8 +286,9 @@ header nav .logo {
     animation: flutuar-contato 25s linear infinite;
 }
 
-#contato h2 {
+#contato h2, #contato .list-unstyled li {
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #contato a {
@@ -297,10 +302,8 @@ header nav .logo {
 }
 
 .contact-logo {
-    max-height: 50px;
+    max-height: 250px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #contato .list-unstyled li {
@@ -326,6 +329,16 @@ footer {
 
 .footer-social .social-icon:hover {
     color: var(--cor-destaque-1); /* Amarelo Solar */
+}
+
+.footer-link {
+    color: var(--cor-destaque-1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #fff;
 }
 
 /* --- Media Queries para Responsividade --- */
