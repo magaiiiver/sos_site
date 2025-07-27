@@ -315,7 +315,7 @@ header nav .logo {
 footer {
     background-color: #F5E6CC; /* Bege claro */
     background-image: url('https://www.transparenttextures.com/patterns/sand.png');
-    color: #6B4F4F; /* Marrom escuro */
+    color: #8B4513; /* Marrom */
 }
 
 .footer-logo img {
@@ -323,7 +323,7 @@ footer {
 }
 
 .footer-social .social-icon {
-    color: #6B4F4F; /* Marrom escuro */
+    color: #8B4513; /* Marrom */
     font-size: 1.5rem;
     margin-left: 15px;
     transition: color 0.3s ease;
@@ -334,7 +334,7 @@ footer {
 }
 
 .footer-link {
-    color: #6B4F4F; /* Marrom escuro */
+    color: #8B4513; /* Marrom */
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
